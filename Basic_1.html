@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Burgers" content="width=device-width, initial-scale=1.0">
+    <title>Burgers</title>
+    <style>
+
+.button {
+         border-radius: 5px; 
+         height: 20px;
+         width: 50px;
+         background-color: greenyellow;
+         border: none;
+         color: black; 
+         position: fixed; 
+         bottom: 10px; 
+         left: 10px;
+         box-shadow: 0 5px gray;
+         transition-duration: 150ms;
+      }
+      .button:hover {
+         background-color: green;
+         cursor: pointer;
+         
+      }
+      .button:active {
+         box-shadow: none;
+         
+      }
+      .background {
+         background-color: antiquewhite;
+      }
+
+   .header {
+      background-color: black;
+      padding: 50px;
+      color: white;
+      position: relative; 
+   }
+   .title{
+      position: absolute;
+      left: 600px;
+      top: 17px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+      color: white;
+   }
+   .description{
+      position: absolute;
+      top: 150px;
+   }
+   .picture {
+      min-height: 200px;
+      min-width: 200px;
+      max-height: 200px;
+      max-width: 200px;
+      border-radius: 20px;
+      transition: 200ms;
+   }
+   .picture:hover {
+      opacity: 50%; 
+      transition: 200ms;
+      min-height: 250px;
+      min-width: 250px;
+      max-height: 250px;
+      max-width: 250px;
+        }
+   .picture:active {
+      border-radius: 50px;
+      min-height: 260px;
+      min-width: 260px;
+      max-height: 260px;
+      max-width: 260px;
+   }
+   .iframe {
+      height: 500px;
+      width: 800px;
+      position: absolute;
+      bottom: -700px;
+      left: 280px;
+   }
+   .more {
+      position: absolute;
+      bottom: -100px;
+      left: 550px;
+   }
+   .hr {
+      height: 5px;
+      background: black;
+      border-radius: 5px;
+      text-decoration: dotted;
+      position: relative;
+      top: 700px;
+      border: none;
+      outline-style: dashed;
+   }
+   .dropdown {
+      position: relative;
+      display: inline-block;
+      transition: 200ms;
+   }
+   .dropbtn {
+      background-color: rgb(183, 183, 183);
+      border-radius: 5px;
+      outline: rgb(0, 0, 0);
+      border: none;
+      font-size: 20px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      transition: 200ms;
+   }
+   .dropdownContent {
+      display: none;
+      outline: black;
+      outline: 5px;
+      z-index: 1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      position: fixed;
+      bottom: 35px;
+      right: 10px;
+      transition: 200ms;
+   }
+   .dropdownContent a {
+      display: none;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: rgb(204, 200, 200);
+      font-size: large;
+      color: black;
+      border-radius: 5px;
+      transition: 200ms;
+   }
+   .dropdown:hover .dropdownContent {
+      display: block;
+      transition: 200ms;
+   }
+   .dropdown:hover .dropdownContent a {
+      display: block;
+      transition: 200ms;
+   }
+   .dropdownContent a:hover {
+      background-color: rgb(126, 126, 126);
+      transition: 200ms;
+   }
+   .dropbtn:hover {
+      background-color: grey;
+      transition: 200ms;
+   }
+   .dropdownContent:hover .dropbtn {
+      background-color: grey;
+      transition: 200ms;
+   }
+   .topBun {
+      max-width: 120px;
+   }
+   </style>
+</head>
+
+
+
+
+
+<body class="background">
+
+<header class="header">
+</header>
+
+
+
+<div>
+   <h1 class="title">Burgers</h1>
+</div>
+
+<p class="description">A burger is a patty of ground beef grilled and placed between two halves of a bun. 
+   Slices of raw onion, lettuce, bacon, mayonnaise, and other ingredients add flavor.
+    Burgers are considered an American food but are popular around the world.</p>
+
+<div style="position: absolute; top: 300px; left: 435px;">
+   
+<a href="Cheeseburger.html"><img class="picture" src="Cheeseburger.png" style="color: rgb(255, 255, 255,0.5);" alt="Cheeseburger"></a> 
+
+<a href="Hamburger.html"><img class="picture" src="Hamburger.png" style="position: relative; left: 50px;" alt="Hamburger"></a>
+
+
+  </div>
+
+
+<hr class="hr">
+
+ <h2 class="more" >More about burgers</h2>  
+
+
+<iframe class="iframe" src="https://en.wikipedia.org/wiki/Burger" frameborder="0">Hello</iframe>
+
+<div class="dropdown">
+   <button class="dropbtn">More</button>
+   <div class="dropdownContent" >
+      <a href="Pizzas.html">Pizza</a>
+      <a href="Boba.html">Boba</a>
+      <a href="SpringRolls.html">Spring Rolls</a>
+   </div>
+</div>
+
+</body>
+
+</html>

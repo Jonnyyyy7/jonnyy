@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Hamburger" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger</title>
+
+
+    <style>
+        .button {
+         border-radius: 5px; 
+         height: 20px;
+         width: 50px;
+         background-color: greenyellow; 
+         border: none;
+         color: black; 
+         position: absolute; 
+         bottom: 10px; 
+         left: 10px;
+         box-shadow: 0 5px gray;
+         transition-duration: 150ms;
+        }
+        .button_text {
+        color: black; 
+        text-decoration: none;
+        }
+        .button:hover{
+        background-color: green;
+        cursor: pointer;
+        }
+        button:active {
+            box-shadow: none;
+        }
+        .picture {
+        min-height: 200px;
+        min-width: 200px;
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 20px;
+        transition: 200ms;
+        }
+        .picture:hover {
+        opacity: 50%; transition: 150ms;
+        min-height: 250px;
+        min-width: 250px;
+        max-height: 250px;
+        max-width: 250px;
+        }
+        .picture:active {
+        border-radius: 50px;
+        min-height: 260px;
+        min-width: 260px;
+        max-height: 260px;
+        max-width: 260px;
+        }
+        .topBun {
+            position: absolute;
+            left: 45%;
+            bottom: 480px;
+            min-height: 150px;
+            min-width: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            transition: 200ms;
+            z-index: 1;
+        }
+        .topBun:hover {
+            position: absolute;
+            left: 47%;
+            transition: 300ms;
+        }
+        .topBun:hover + .topBunText {
+            opacity: 1;
+            position: absolute;
+            left: 60%;
+            bottom: 530px;
+            transition: 300ms;
+        }
+        .topBunText {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 530px;
+            transition: 200ms;
+            z-index: 0;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: black;
+        }
+        .cheese {
+            position: absolute;
+            left: 45%;
+            bottom: 380px;
+            min-height: 150px;
+            min-width: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            transition: 200ms;
+            z-index: 1;
+        }
+        .cheese:hover {
+            position: absolute;
+            left: 47%;
+            transition: 200ms;
+        }
+        .cheese:hover + .cheeseText {
+            opacity: 1;
+            position: absolute;
+            left: 60%;
+            transition: 300ms;
+        }
+        .cheeseText {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 430px;
+            transition: 300ms;
+            z-index: 0;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: black;
+        }
+        .cheese2 {
+            position: absolute;
+            left: 45%;
+            bottom: 220px;
+            min-height: 150px;
+            min-width: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            transition: 200ms;
+            z-index: 1;
+        }
+        .cheese2:hover {
+            position: absolute;
+            left: 47%;
+            transition: 200ms;
+        }
+        .cheese2:hover + .cheeseText2 {
+            opacity: 1;
+            position: absolute;
+            left: 60%;
+            transition: 300ms;
+        }
+        .cheeseText2 {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 270px;
+            transition: 300ms;
+            z-index: 0;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: black;
+        }
+        .patty {
+            position: absolute;
+            left: 45%;
+            bottom: 300px;
+            min-height: 150px;
+            min-width: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            transition: 200ms;
+            z-index: 1;
+        }
+        .patty:hover {
+            position: absolute;
+            left: 47%;
+            transition: 200ms;
+        }
+        .patty:hover + .pattyText {
+            opacity: 1;
+            position: absolute;
+            left: 60%;
+        }
+        .pattyText {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 350px;
+            z-index: 0;
+            transition: 300ms;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: black;
+        }
+        .patty2 {
+            position: absolute;
+            left: 45%;
+            bottom: 140px;
+            min-height: 150px;
+            min-width: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            transition: 200ms;
+            z-index: 1;
+        }
+        .patty2:hover {
+            position: absolute;
+            left: 47%;
+            transition: 200ms;
+        }
+        .patty2:hover + .pattyText2 {
+            opacity: 1;
+            position: absolute;
+            left: 60%;
+        }
+        .pattyText2 {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 190px;
+            z-index: 0;
+            transition: 300ms;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: black;
+        }
+        .bottomBun {
+            position: absolute;
+            left: 45%;
+            bottom: 60px;
+            min-height: 150px;
+            min-width: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            transition: 200ms;
+            z-index: 1;
+        }
+        .bottomBun:hover {
+            position: absolute;
+            left: 47%;
+            transition: 200ms;
+        }
+        .bottomBun:hover + .bottomBunText {
+            opacity: 1;
+            position: absolute;
+            left: 60%;
+            transition: 300ms;
+        }
+        .bottomBunText {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 110px;
+            z-index: 0;
+            transition: 300ms;
+            text-decoration: none;
+            font-family: sans-serif;
+            color: black;
+        }
+        .description {
+            position: absolute;
+            left: 36%;
+            top: 2%;
+            font-family: sans-serif 
+        }
+        .description2 {
+            position: absolute;
+            left: 42.5%;
+            top: 7%;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+
+
+<body style="background-color: antiquewhite;">
+    <h1>Hamburger</h1>
+
+   <a href="Basic_1.html"><button class="button" >Back</button></a>
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 12px;"> More about hamburgers</h1>
+
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Hamburger"><img class="picture" src="Hamburger.png" alt="Hamburger"></a>
+
+    <h2 class="description" >Core components of a Hamburger</h2>
+    <p class="description2" >Click on the ingredients for more information</p>
+
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Bun"><img class="topBun" src="Topbun2.png" alt="Top Bun"> <p class="topBunText">The top bun of burger</p></a>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Cheese"><img class="cheese" src="Cheese2.png" alt="Cheese"><p class="cheeseText" >Melted cheese on the first of two patties</p></a>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Patty"><img class="patty" src="Patty2.png" alt="Patty"><p class="pattyText" >First of two patties on the burger</p></a>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Cheese"><img class="cheese2" src="Cheese2.png" alt=""><p class="cheeseText2" >Melted cheese on the second patty</p></a>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Patty"><img class="patty2" src="Patty2.png" alt="Patty"><p class="pattyText2" >Second patty on the burger</p></a>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Bun"><img class="bottomBun" src="BottomBun2.png" alt="Bottom Bun"><p class="bottomBunText" >The bottom bun of the burger</p></a>
+</body>
+</html>
